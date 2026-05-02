@@ -2,7 +2,7 @@ class Solution {
 public:
     bool isGood(int n) {
         int f = false, s = false;
-        while(n > 1) {
+        while(n > 0) {
             int ld = n % 10;
             if(ld == 3 || ld == 4 || ld == 7) f = true;
             if(ld == 2 || ld == 5 || ld == 6 || ld == 9) s = true; 
@@ -14,7 +14,7 @@ public:
     }
     int rotatedDigits(int n) {
         int ans = 0;
-        for(int i=0;i<=n;i++) {
+        for(int i=1;i<=n;i++) {
             if(isGood(i)) ans++;
         }
         return ans;
