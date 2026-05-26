@@ -15,7 +15,7 @@ public:
                 if(unique.find(ch) == unique.end(ch) && upper[ch] > 0){
                     count++;
                     unique.insert(ch);
-                    upper[ch]++;
+                    upper[ch]--;
                 }
             }
         }
